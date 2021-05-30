@@ -10,7 +10,6 @@ import {showModal} from './modules/modal';
 
 document.addEventListener('DOMContentLoaded', () => {
     const intervalOpenModal = setTimeout(() => showModal('.modal', intervalOpenModal), 15000);
-
     tabs('.tabheader__item', '.tabcontent', '.tabheader__items', 'tabheader__item_active');
     modal('[data-modal]', '.modal', intervalOpenModal);
     timer('.timer', '2021-06-30');
