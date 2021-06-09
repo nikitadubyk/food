@@ -1,3 +1,6 @@
+require('es6-promise').polyfill();
+import 'nodelist-foreach-polyfill';
+
 import tabs from './modules/tabs';
 import modal from './modules/modal';
 import timer from './modules/timer';
@@ -9,7 +12,7 @@ import {showModal} from './modules/modal';
  
 
 document.addEventListener('DOMContentLoaded', () => {
-    const intervalOpenModal = setTimeout(() => showModal('.modal', intervalOpenModal), 15000);
+    const intervalOpenModal = setTimeout(() => showModal('.modal', intervalOpenModal), 30000);
     
     tabs('.tabheader__item', '.tabcontent', '.tabheader__items', 'tabheader__item_active');
     modal('[data-modal]', '.modal', intervalOpenModal);
